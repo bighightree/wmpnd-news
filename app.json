@@ -4,8 +4,8 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#35a2e5",
+    "navigationBarTitleText": "叽喳头条",
+    "navigationBarTextStyle":"white"
   }
 }
