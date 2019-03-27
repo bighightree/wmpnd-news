@@ -1,15 +1,31 @@
 <!--index.wxml-->
+
+<!-- 分类 -->
 <view class='tabBar'>
     <view class='tab' wx:for='{{tabList}}'>{{item.name}}</view>
 </view>
-<view class='hot-news'>
+
+<!-- 热门 -->
+<view class='hot-news' wx:for='{{newsList}}' wx:if='{{index==0}}'>
     <view class='hot-tips'>热门</view>
     <view class='hot-desc'>
-        <view class='hot-title'>官湖村陈生：上北大车票是乡亲凑的，赠别墅遇尴尬两年没回乡</view>
-        <view class='hot-footage'>
-            <text class='hot-source'>上游新闻</text>
-            <text class='hot-time'>10:22</text>
+        <view class='hot-title'>{{item.title}}</view>
+        <view class='news-footage'>
+            <text class='news-source'>{{item.source}}</text>
+            <text class='news-time'>{{item.date}}</text>
         </view>
     </view>
-    <image class='hot-image' src='/image/news0301.jpg' mode='scaleToFill'></image>
+    <image class='hot-image' src='{{item.firstImage}}' mode='scaleToFill'></image>
+</view>
+
+<!-- 新闻列表 -->
+<view class='news-item' wx:for='{{newsList}}' wx:if='{{index>0}}'>
+    <view class='news-desc'>
+        <view class='news-title'>{{item.title}}</view>
+        <view class='news-footage'>
+            <text class='news-source'>{{item.source}}</text>
+            <text class='news-time'>{{item.date}}</text>
+        </view>
+    </view>
+    <image class='news-image' src='{{item.firstImage}}' mode='aspectFit'></image>
 </view>

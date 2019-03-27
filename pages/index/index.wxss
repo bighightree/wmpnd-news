@@ -13,6 +13,7 @@
     color: white;
 }
 
+/* 热点新闻的样式 */
 .hot-news {
     position: relative;
     height: 350rpx;
@@ -42,18 +43,9 @@
     color: white;
     margin-bottom: 10rpx;
     font-size: 36rpx;
+    line-height: 50rpx;
     padding: 0rpx 10rpx;
-}
-
-.hot-footage {
-    color: #ccc;
-    font-size: 30rpx;
-    line-height: 42rpx;
-    padding: 0rpx 10rpx;
-}
-
-.hot-source {
-    margin-right: 20rpx;
+    height: 100rpx;
 }
 
 .hot-image {
@@ -63,4 +55,45 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+/* 来源和时间的样式可以重用 */
+.news-footage {
+    opacity: 0.5;
+    font-size: 30rpx;
+    line-height: 42rpx;
+    padding: 0rpx 10rpx;
+}
+
+.news-source {
+    margin-right: 20rpx;
+}
+
+/* 普通新闻的样式 */
+.news-item {
+    height: 200rpx;
+    display: flex;
+    border-bottom: 1rpx solid rgb(200, 200, 200);
+    margin: 30rpx 20rpx;
+}
+
+.news-image {
+    height: 180rpx;
+    width: 180rpx;
+    flex-shrink: 0;
+    margin-left: 20rpx;
+}
+
+.news-desc {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.news-title {
+    color: black;
+    margin-bottom: 10rpx;
+    font-size: 36rpx;
+    padding: 0rpx 10rpx;
+    line-height: 50rpx;
+    height: 130rpx;
 }
