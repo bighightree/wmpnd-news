@@ -18,7 +18,6 @@
     height: 350rpx;
     margin: 20rpx;
     border-radius: 15rpx;
-    background-color: moccasin;
 }
 
 .hot-tips {
@@ -30,4 +29,38 @@
     background-color: rgba(255, 0, 0, 0.5);
     border-radius: 0 0 0 30rpx;
     padding: 5rpx 10rpx 10rpx 20rpx;
+}
+
+.hot-desc {
+    height: 150rpx;
+    position: absolute;
+    bottom: 0rpx;
+    padding: 10rpx;
+}
+
+.hot-title {
+    color: white;
+    margin-bottom: 10rpx;
+    font-size: 36rpx;
+    padding: 0rpx 10rpx;
+}
+
+.hot-footage {
+    color: #ccc;
+    font-size: 30rpx;
+    line-height: 42rpx;
+    padding: 0rpx 10rpx;
+}
+
+.hot-source {
+    margin-right: 20rpx;
+}
+
+.hot-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }

@@ -5,8 +5,11 @@
 <view class='hot-news'>
     <view class='hot-tips'>热门</view>
     <view class='hot-desc'>
-        <view class='hot-title'></view>
-        <view class='hot-footage'></view>
+        <view class='hot-title'>官湖村陈生：上北大车票是乡亲凑的，赠别墅遇尴尬两年没回乡</view>
+        <view class='hot-footage'>
+            <text class='hot-source'>上游新闻</text>
+            <text class='hot-time'>10:22</text>
+        </view>
     </view>
-    <image class='hot-image'></image>
+    <image class='hot-image' src='/image/news0301.jpg' mode='scaleToFill'></image>
 </view>
