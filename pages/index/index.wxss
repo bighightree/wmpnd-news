@@ -12,3 +12,22 @@
     text-align: center;
     color: white;
 }
+
+.hot-news {
+    position: relative;
+    height: 350rpx;
+    margin: 20rpx;
+    border-radius: 15rpx;
+    background-color: moccasin;
+}
+
+.hot-tips {
+    position: absolute;
+    right: 1rpx;
+    top: 1rpx;
+    font-size: 30rpx;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 0 0 0 30rpx;
+    padding: 5rpx 10rpx 10rpx 20rpx;
+}

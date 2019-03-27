@@ -2,3 +2,11 @@
 <view class='tabBar'>
     <view class='tab' wx:for='{{tabList}}'>{{item.name}}</view>
 </view>
+<view class='hot-news'>
+    <view class='hot-tips'>热门</view>
+    <view class='hot-desc'>
+        <view class='hot-title'></view>
+        <view class='hot-footage'></view>
+    </view>
+    <image class='hot-image'></image>
+</view>
