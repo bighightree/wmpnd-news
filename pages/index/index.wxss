@@ -1,1 +1,14 @@
 /**index.wxss**/
+.tabBar {
+    display: flex;
+    padding: 5rpx 5rpx;
+    background-color: #35a2e5;
+    height: 80rpx;
+    align-items: center;
+}
+
+.tab {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+}
