@@ -1,4 +1,14 @@
 //index.js
+const tabMap = {
+    '国内': 'gn',
+    '国际': 'gj',
+    '财经': 'cj',
+    '娱乐': 'yl',
+    '军事': 'js',
+    '体育': 'ty',
+    '其他': 'other',
+}
+
 Page({
     data: {
         tabList: [{
@@ -50,7 +60,7 @@ Page({
             },
 
             success(res) {
-                console.log('Request newsList success!')
+                console.log(`Request newsList ${type} success!`)
                 let tmpNewsList = []
                 let result = res.data.result
                 for (let i = 0; i < result.length; i++) {
@@ -75,5 +85,15 @@ Page({
                 callback && callback()
             }
         })
+    },
+
+    tapTabItem(event) {
+        // console.log(event)
+        let type = tabMap[event.target.dataset.type]
+        console.log(type)
+        this.setData({
+            newsType: type
+        })
+        this.getNewsList(type)
     }
 })

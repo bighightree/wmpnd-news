@@ -2,7 +2,7 @@
 
 <!-- 分类 -->
 <view class='tabBar'>
-    <view class='tab' wx:for='{{tabList}}'>{{item.name}}</view>
+    <view class='tab' wx:for='{{tabList}}' data-type='{{item.name}}' bindtap='tapTabItem'>{{item.name}}</view>
 </view>
 
 <!-- 热门 -->
