@@ -21,7 +21,7 @@
     float: right;
 }
 
-.img {
+.firstImage, .mainBodyImage {
     width: 700rpx;
     height: 540rpx;
     padding: 0rpx 25rpx;
