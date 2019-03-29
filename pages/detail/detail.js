@@ -20,7 +20,6 @@ Page({
                     time: result.date.substring(11, 16),
                     readCount: result.readCount,
                     source: result.source,
-                    firstImage: result.firstImage,
                     mainBody: result.content,
                 })
             }

@@ -6,7 +6,6 @@
     <text class='time'>{{time}}</text>
     <text class='readCount'>{{readCount}}</text>
 </view>
-<image class='firstImage' src='{{firstImage}}'></image>
 <view wx:for='{{mainBody}}'>
     <image class='mainBodyImage' wx:if='{{item.type === "image"}}' src='{{item.src}}'></image>
     <view class='paragraph' wx:elif='{{item.type === "p"}}'>{{item.text}}</view>
