@@ -2,13 +2,14 @@
 Page({
     data: {},
 
-    onLoad() {
+    onLoad(option) {
         let po = this
+        console.log('detail get id' + option.id)
         wx.request({
             url: 'https://test-miniprogram.com/api/news/detail',
 
             data: {
-                id: '1552623252481',
+                id: option.id,
             },
 
             success(res) {

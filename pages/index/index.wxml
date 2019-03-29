@@ -6,7 +6,7 @@
 </view>
 
 <!-- 热门 -->
-<view class='hot-news' wx:for='{{newsList}}' wx:if='{{index==0}}'>
+<view class='hot-news' wx:for='{{newsList}}' wx:if='{{index==0}}' data-id='{{item.id}}' bindtap='gotoDetail'>
     <view class='hot-tips'>热门</view>
     <view class='hot-desc'>
         <view class='hot-title'>{{item.title}}</view>
@@ -19,7 +19,7 @@
 </view>
 
 <!-- 新闻列表 -->
-<view class='news-item' wx:for='{{newsList}}' wx:if='{{index>0}}'>
+<view class='news-item' wx:for='{{newsList}}' wx:if='{{index>0}}' data-id='{{item.id}}' bindtap='gotoDetail'>
     <view class='news-desc'>
         <view class='news-title'>{{item.title}}</view>
         <view class='news-footage'>

@@ -116,5 +116,14 @@ Page({
             tabTextDeco: tmpTD,
         })
         this.getNewsList(type)
+    },
+
+    gotoDetail(event) {
+        // console.log(event)
+        let id = event.currentTarget.dataset.id
+        console.log('index send id ' + id)
+        wx.navigateTo({
+            url: '/pages/detail/detail?id=' + id,
+        })
     }
 })
