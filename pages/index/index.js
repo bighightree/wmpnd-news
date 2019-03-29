@@ -88,6 +88,10 @@ Page({
 
             fail(res) {
                 console.log(res)
+                wx.showToast({
+                    title: '新闻获取失败，请检查网络或稍后再试',
+                    icon: 'none'
+                })
             },
 
             complete() {
