@@ -1,0 +1,34 @@
+/* pages/detail/detail.wxss */
+
+.title {
+    margin: 35rpx 25rpx;
+    font-size: 50rpx;
+    line-height: 70rpx;
+    font-weight: bold;
+}
+
+.info {
+    opacity: 0.8;
+    font-size: 30rpx;
+    margin: 20rpx 25rpx 80rpx 25rpx;
+}
+
+.source {
+    margin-right: 20rpx;
+}
+
+.readCount {
+    float: right;
+}
+
+.img {
+    width: 700rpx;
+    height: 540rpx;
+    padding: 0rpx 25rpx;
+}
+
+.paragraph {
+    margin: 35rpx 25rpx;
+    font-size: rpx;
+    line-height: 56rpx;
+}

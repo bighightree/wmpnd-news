@@ -1,0 +1,10 @@
+<!--pages/detail/detail.wxml-->
+
+<view class='title'>{{title}}</view>
+<view class='info'>
+    <text class='source'>{{source}}</text>
+    <text class='time'>{{time}}</text>
+    <text class='readCount'>{{readCount}}</text>
+</view>
+<image class='img' src='{{imgPath}}'></image>
+<view class='paragraph' wx:for='{{mainBody}}'>{{item.text}}</view>
