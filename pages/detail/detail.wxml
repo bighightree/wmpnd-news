@@ -8,5 +8,6 @@
 </view>
 <view wx:for='{{mainBody}}'>
     <image class='mainBodyImage' wx:if='{{item.type === "image"}}' src='{{item.src}}'></image>
-    <view class='paragraph' wx:elif='{{item.type === "p"}}'>{{item.text}}</view>
+    <view class='paragraph' wx:elif='{{item.type === "strong"}}' style='font-weight: bold'>{{item.text}}</view>
+    <view class='paragraph' wx:else>{{item.text}}</view>
 </view>
