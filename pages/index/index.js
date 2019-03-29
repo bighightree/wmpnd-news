@@ -9,6 +9,8 @@ const tabMap = {
     '其他': 'other',
 }
 
+const NUMBEROFTYPE = 7
+
 Page({
     data: {
         tabList: [{
@@ -33,6 +35,10 @@ Page({
                 name: '其他'
             },
         ],
+
+        tabFontWeight: ['bold', 'normal', 'normal', 'normal', 'normal', 'normal', 'normal'],
+
+        tabTextDeco: ['underline', 'none', 'none', 'none', 'none', 'none', 'none'],
 
         newsType: 'gn',
 
@@ -90,9 +96,24 @@ Page({
     tapTabItem(event) {
         // console.log(event)
         let type = tabMap[event.target.dataset.type]
-        console.log(type)
+        let id = event.target.dataset.id
+
+        // 修改顶栏分类的样式
+        let tmpFW = [], tmpTD = []
+        for (let i = 0; i < NUMBEROFTYPE; i++) {
+            if (i === id) {
+                tmpFW[i] = 'bold'
+                tmpTD[i] = 'underline'
+            } else {
+                tmpFW[i] = 'normal'
+                tmpTD[i] = 'none'
+            }
+        }
+
         this.setData({
-            newsType: type
+            newsType: type,
+            tabFontWeight: tmpFW,
+            tabTextDeco: tmpTD,
         })
         this.getNewsList(type)
     }
