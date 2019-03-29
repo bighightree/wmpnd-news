@@ -10,6 +10,8 @@ const tabMap = {
 }
 
 const NUMBEROFTYPE = 7
+const DEFAULTSOURCE = '网络来源'
+const IMAGEHOLDER = '../../images/img_holder.jpg'
 
 Page({
     data: {
@@ -74,8 +76,9 @@ Page({
                         id: result[i].id,
                         title: result[i].title,
                         time: result[i].date.substring(11, 16),
-                        source: result[i].source,
-                        imgPath: result[i].firstImage,
+                        // 如果字段不存在或者字段为空字符串，则设置为默认值
+                        source: (!result[i].source || result[i].source === '') ? DEFAULTSOURCE : result[i].source,
+                        imgPath: (!result[i].firstImage || result[i].firstImage === '') ? IMAGEHOLDER : result[i].firstImage,
                     })
                 }
                 po.setData({
@@ -99,7 +102,8 @@ Page({
         let id = event.target.dataset.id
 
         // 修改顶栏分类的样式
-        let tmpFW = [], tmpTD = []
+        let tmpFW = [],
+            tmpTD = []
         for (let i = 0; i < NUMBEROFTYPE; i++) {
             if (i === id) {
                 tmpFW[i] = 'bold'
