@@ -12,10 +12,10 @@
         <view class='hot-title'>{{item.title}}</view>
         <view class='news-footage'>
             <text class='news-source'>{{item.source}}</text>
-            <text class='news-time'>{{item.date}}</text>
+            <text class='news-time'>{{item.time}}</text>
         </view>
     </view>
-    <image class='hot-image' src='{{item.firstImage}}' mode='scaleToFill'></image>
+    <image class='hot-image' src='{{item.imgPath}}' mode='scaleToFill'></image>
 </view>
 
 <!-- 新闻列表 -->
@@ -24,8 +24,8 @@
         <view class='news-title'>{{item.title}}</view>
         <view class='news-footage'>
             <text class='news-source'>{{item.source}}</text>
-            <text class='news-time'>{{item.date}}</text>
+            <text class='news-time'>{{item.time}}</text>
         </view>
     </view>
-    <image class='news-image' src='{{item.firstImage}}' mode='aspectFit'></image>
+    <image class='news-image' src='{{item.imgPath}}' mode='aspectFit'></image>
 </view>
