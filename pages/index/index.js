@@ -33,7 +33,14 @@ Page({
         this.getNewsList('gn')
     },
 
-    getNewsList(type) {
+    onPullDownRefresh() {
+        this.getNewsList(this.data.newsType, () => {
+            wx.stopPullDownRefresh()
+            console.log('Stop PullDown Refresh!')
+        })
+    },
+
+    getNewsList(type, callback) {
         let po = this
         wx.request({
             url: 'https://test-miniprogram.com/api/news/list',
@@ -43,13 +50,14 @@ Page({
             },
 
             success(res) {
+                console.log('Request newsList success!')
                 let tmpNewsList = []
                 let result = res.data.result
                 for (let i = 0; i < result.length; i++) {
                     tmpNewsList.push({
                         id: result[i].id,
                         title: result[i].title,
-                        time: result[i].date.substring(11,16),
+                        time: result[i].date.substring(11, 16),
                         source: result[i].source,
                         imgPath: result[i].firstImage,
                     })
@@ -59,8 +67,12 @@ Page({
                 })
             },
 
-            complete(res) {
+            fail(res) {
                 console.log(res)
+            },
+
+            complete() {
+                callback && callback()
             }
         })
     }

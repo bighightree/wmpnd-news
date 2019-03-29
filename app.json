@@ -1,11 +1,12 @@
 {
-  "pages":[
-    "pages/index/index"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#35a2e5",
-    "navigationBarTitleText": "叽喳头条",
-    "navigationBarTextStyle":"white"
-  }
+    "pages": [
+        "pages/index/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#35a2e5",
+        "navigationBarTitleText": "叽喳头条",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true
+    }
 }
